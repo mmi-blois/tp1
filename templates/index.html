@@ -1,13 +1,28 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <script src="js/main.js"></script>
-</head>
-<body>
-    <div id="mess">{{ mess }}</div>
-</body>
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <title>Document</title>
+      <script src="js/main.js"></script>
+      <link
+         rel="stylesheet"
+         href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+      />
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      <script src="../js/datepicker-fr.js"></script>
+   </head>
+   <body>
+      <p>Pseudo <input type="text" /></p>
+      <p>Date <input type="text" id="datepicker" /></p>
+      <p><input type="submit" value="S'inscrire"></p>
+      <script>
+         $(function() {
+            $.datepicker.setDefaults($.datepicker.regional["fr"]);
+            $("#datepicker").datepicker();
+         });
+      </script>
+   </body>
 </html>
